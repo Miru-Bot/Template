@@ -1,7 +1,5 @@
 const { MessageFlags, SlashCommandBuilder } = require("discord.js");
-const { join } = require("node:path");
-const structurePath = join(process.cwd(), "structures");
-const CommandInterface = require(join(structurePath, "CommandInterface"));
+const ClientInterface = require("./ClientInterface");
 
 class CommandInterface {
     constructor(options) {
