@@ -16,7 +16,7 @@ module.exports = async(client) => {
             client.on("ready", async() => {
                 const appcmd = await client.application.commands.fetch();
                 if (!appcmd.find(c => c.name == commands.data.name)) {
-                    await appcmd.create(commands.data);
+                    await client.application.commands.create(commands.data);
                 }
             });
         });

@@ -10,7 +10,7 @@ module.exports = async(client) => {
     for (const file of events1) {
         const events = require(join(clientPath, file));
         
-        client.on(events.name, events.run);
+        client.on(events.name, events.run.bind(null, client));
     }
     
     console.log("[Handlers]", path, "loaded!", `${events1.length} file`);
