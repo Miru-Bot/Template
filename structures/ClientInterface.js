@@ -16,8 +16,8 @@ class ClientInterface {
         this.createdAt = data.createdAt;
         this.createdTimestamp = data.createdTimestamp;
         this.client = data.client;
-        this.config = data.client.config;
-        this.colors = data.client.config.colors;
+        this.config = this.client.config;
+        this.colors = this.config.colors;
         this.setArgs(args);
     }
     get isInteraction() {
@@ -89,10 +89,11 @@ class ClientInterface {
     
     // Custom Objective
     get EmbedBuilder() {
+        const color = this.colors.main;
         return class extends EmbedBuilder {
             constructor(...o) {
                 super(...o)
-                this.data = { color: this.colors.main };
+                this.data = { color };
             }
         };
     }
