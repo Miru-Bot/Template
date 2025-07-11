@@ -1,0 +1,15 @@
+{
+    "name": "miru",
+    "version": "0.0.1",
+    "description": "Miru BOT Template",
+    "main": "index.js",
+    "scripts": {
+      "start": "node ."
+    },
+    "engines": {
+      "node": ">=22.x"
+    },
+    "dependencies": {
+      "discord.js": "^14.21.0"
+    }
+}
