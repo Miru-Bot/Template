@@ -14,7 +14,7 @@ module.exports = new CommandInterface({
         const timestamp = await Date.now();
         
         const embed = new i.EmbedBuilder()
-            .setDescription("> Runtime service latency")
+            .setDescription("Runtime service latency")
             .addFields(
                 {
                     name: "Client Websocket",
