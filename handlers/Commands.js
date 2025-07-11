@@ -11,7 +11,7 @@ module.exports = async(client) => {
         const files = readdirSync(path1);
         files.forEach(file => {
             const path2 = join(path1, file);
-            const commands = require(path);
+            const commands = require(path2);
             client.commands.set(commands.data.name, commands);
             client.on("ready", async() => {
                 const appcmd = await client.application.commands.fetch();
