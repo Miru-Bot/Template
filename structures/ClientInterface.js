@@ -9,7 +9,7 @@ class ClientInterface {
         this.author = data instanceof Message ? data.author : data.user;
         this.authorId = this.author.id;
         this.channel = data.channel;
-        this.channelId = this.channelId;
+        this.channelId = this.channel.id;
         this.guild = data.guild;
         this.guildId = this.guild.id;
         this.member = data.member;
