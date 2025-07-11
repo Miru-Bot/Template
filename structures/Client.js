@@ -38,7 +38,7 @@ class MiruClient extends Client {
         
         const handlers = readdirSync(path);
         for (const file of handlers) {
-            require(join(handlers, file))(this);
+            require(join(path, file))(this);
         }
         
         console.log("[Closed]", path, `${Date.now()-start}ms`);
