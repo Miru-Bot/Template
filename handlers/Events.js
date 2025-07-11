@@ -7,7 +7,7 @@ module.exports = async(client) => {
     
     const events1 = readdirSync(join(path, "Client"));
     for (const file of events1) {
-        const events = join(path, file);
+        const events = require(join(path, file));
         
         client.on(events.name, events.run);
     }
