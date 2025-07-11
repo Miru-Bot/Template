@@ -89,7 +89,7 @@ class ClientInterface {
     
     // Custom Objective
     get EmbedBuilder() {
-        const color = this.colors.main.replace("#", "0x")
+        const color = parseInt(this.colors.main.replace("#", "0x"));
         return class extends EmbedBuilder {
             constructor(...o) {
                 super(...o)
