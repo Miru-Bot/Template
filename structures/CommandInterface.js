@@ -39,3 +39,5 @@ class CommandInterface {
         console.log(`[CommandUsage] ${this?.data?.name} | ${i.author.username} - ${i.authorId} | ${i.guild.name} - ${i.guildId}`);
     }
 }
+
+module.exports = CommandInterface;
