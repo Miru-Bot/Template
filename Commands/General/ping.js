@@ -18,7 +18,7 @@ module.exports = new CommandInterface({
             .addFields(
                 {
                     name: "Client Websocket",
-                    value: `> ${client.ws.ping}ms`,
+                    value: `> ${i.client.ws.ping}ms`,
                     inline: true
                 },
                 {
