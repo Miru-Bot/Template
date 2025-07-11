@@ -90,7 +90,8 @@ class ClientInterface {
     // Custom Objective
     get EmbedBuilder() {
         return class extends EmbedBuilder {
-            constructor() {
+            constructor(...o) {
+                super(...o)
                 this.data = { color: this.colors.main };
             }
         };
