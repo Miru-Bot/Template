@@ -5,9 +5,10 @@ module.exports = async(client) => {
     const path = join(process.cwd(), "Events");
     console.log("[Handlers]", path, "opened...");
     
-    const events1 = readdirSync(join(path, "Client"));
+    const clientPath = join(path, "Client");
+    const events1 = readdirSync(clientPath);
     for (const file of events1) {
-        const events = require(join(path, file));
+        const events = require(join(clientPath, file));
         
         client.on(events.name, events.run);
     }
