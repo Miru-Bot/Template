@@ -9,9 +9,8 @@ module.exports = new CommandInterface({
         description: "Sending bot latency"
     },
     async execute(i) {
+        const start = Date.now();
         await i.deferReply();
-        
-        const timestamp = await Date.now();
         
         const embed = new i.EmbedBuilder()
             .setDescription("Runtime service latency")
@@ -23,7 +22,7 @@ module.exports = new CommandInterface({
                 },
                 {
                     name: "Sending Message",
-                    value: `> ${timestamp - i.createdTimestamp}ms`,
+                    value: `> ${start - Date.now()}ms`,
                     inline: true
                 }
             );
