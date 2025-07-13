@@ -22,7 +22,7 @@ module.exports = new CommandInterface({
                 },
                 {
                     name: "Sending Message",
-                    value: `> ${start - Date.now()}ms`,
+                    value: `> ${Date.now() - start}ms`,
                     inline: true
                 }
             );
